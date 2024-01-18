@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Add Genre{% endblock %}
+{% block content %}
+<form action="#" method="post">
+  <div class="container text-center" style="margin-top: 50px">
+        <div class="container text-center" style="margin-bottom: 20px;">
+            <h2>Add genre</h2>
+        </div>
+        <div class="col-md-6 offset-md-3">
+            <input class="form-control" name="name" type="text" placeholder="Name" value="{{request.form['name']}}" required/>
+            <br>
+        </div>
+        <br>
+        <br>
+        <button class="btn btn-primary" style="background-color: #8000ff; border-color: #8000ff;" type="submit">Submit</button>
+    </div>
+</form>
+{% endblock %}

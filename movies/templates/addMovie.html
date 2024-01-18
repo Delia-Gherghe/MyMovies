@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Add Movie{% endblock %}
+{% block content %}
+<form action="#" method="post">
+  <div class="container text-center" style="margin-top: 50px">
+        <div class="container text-center" style="margin-bottom: 20px;">
+            <h2>Add movie</h2>
+        </div>
+        <div class="col-md-6 offset-md-3">
+            <input class="form-control" name="title" type="text" placeholder="Title" value="{{request.form['title']}}" required/>
+            <br>
+        </div>
+        <div class="col-md-6 offset-md-3">
+            <input class="form-control" name="year" type="number" placeholder="Year" value="{{request.form['year']}}"/>
+            <br>
+        </div>
+        <div class="col-md-6 offset-md-3">
+            <input class="form-control" name="duration" type="number" placeholder="Duration" value="{{request.form['duration']}}"/>
+            <br>
+        </div>
+        <br>
+        <br>
+        <button class="btn btn-primary" type="submit" style="background-color: #8000ff; border-color: #8000ff;">Submit</button>
+    </div>
+</form>
+{% endblock %}

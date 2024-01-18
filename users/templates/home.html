@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}MyMovies{% endblock %}
+{% block content %}
+<div class="container text-center my-5">
+    <h1>WELCOME TO MYMOVIES</h1>
+    <br>
+    <h6>Explore the most popular movies from all genres. Help other users find their future watches by rating the movies you've watched
+    and engage in discussions by leaving your opinion in a review! Add the movies that you've watched or plan to watch in your watchlist in order to keep
+    track of everything!</h6>
+    <br>
+    <img src="{{url_for('static', filename='movie_posters.jpg')}}" width="80%"/>
+    <br>
+    <br>
+    <a class="nav-link btn btn-primary text-white" href="http://localhost:8001/movies" style="width: 20%; text-align: center; margin-left: auto; margin-right: auto; font-size: 18px; padding: 7px; background-color: #8000ff; border-color: #8000ff;"><span class="fas fa-film"></span>&emsp;Explore movies</a>
+</div>
+{% endblock %}

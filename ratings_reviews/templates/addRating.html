@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Add Rating{% endblock %}
+{% block content %}
+<form action="#" method="post">
+  <div class="container text-center" style="margin-top: 50px">
+        <div class="container text-center" style="margin-bottom: 20px;">
+            <h2>Add rating</h2>
+        </div>
+        <div class="col-md-6 offset-md-3">
+            <input class="form-control" name="username" type="text" placeholder="Username" value="{{request.form['username']}}" required/>
+            <br>
+        </div>
+        <div class="col-md-6 offset-md-3">
+            <label for="rating">Rating</label>
+            <select id="rating" name="rating" >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            <br>
+        </div>
+        <br>
+        {% if error %}
+        <label style="color: red">{{error}}</label>
+        {% endif %}
+        <br>
+        <br>
+        <button class="btn btn-primary" type="submit" style="background-color: #8000ff; border-color: #8000ff;">Submit</button>
+    </div>
+</form>
+{% endblock %}

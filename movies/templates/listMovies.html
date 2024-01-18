@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Movies{% endblock %}
+{% block content %}
+<div class="container" style="margin-top: 50px">
+    <div class="container text-center" style="margin-bottom: 20px;">
+            <h1>Movies</h1>
+        </div>
+    <br>
+    <table class="table table-hover">
+        <thead class="thead-inverse">
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Duration</th>
+            <th>Genre</th>
+            <th></th>
+        </tr>
+        </thead>
+        {% for movie in movies %}
+        <tr style="border-bottom: 1px solid black">
+            <td>{{movie['title']}}</td>
+            <td>{{movie['year']}}</td>
+            <td>{{movie['duration']}} min</td>
+            <td>{{movie['genre_name']}}</td>
+            <td><a href="http://localhost:8002/movies/{{movie['movie_id']}}/info"><i class="fas fa-info-circle" style="font-size: 18px; color: #8000ff; border-color: #8000ff;"></i></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+global:
+  scrape_interval: 10s
+scrape_configs:
+  - job_name: 'users'
+    metrics_path: '/metrics'
+    static_configs:
+      - targets: ['users:8000']
+  - job_name: 'movies'
+    metrics_path: '/metrics'
+    static_configs:
+      - targets: ['movies:8001']
+  - job_name: 'ratings_reviews'
+    metrics_path: '/metrics'
+    static_configs:
+      - targets: [ 'ratings_reviews:8002' ]
+  - job_name: 'watchlists'
+    metrics_path: '/metrics'
+    static_configs:
+      - targets: [ 'watchlists:8003' ]
